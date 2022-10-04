@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<title>Cacau show</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/geral.css">
+		<script>
+function validar() {
+var v_nome = form1.nome.value;
+if (v_nome == "") {
+alert('Preencha o campo com seu nome');
+form1.nome.focus();
+return false; }
+if (v_nome.length < 5) {
+alert('Digite seu nome completo');
+form1.nome.focus();
+return false; }
+if (v_nome.length > 5) {
+alert('Nome completo digitado');
+form1.nome.focus();
+return true; }
+var QTD = form1.QTD.value;
+ var NUMERO = Math.round(Math.random() * 4 + 1);
+ if (QTD == NUMERO)
+{
+document.write('OK, acertou');
+}
+else
+{
+document.write('Errou!!! Foi gerado',NUMERO);
+}
+
+}
+</script>
+	</head>
+	<body>
+	
+		<div id="container">
+			
+				<div id="header">
+				<h1 class="titulo">Cacau Show</h1>
+
+				<img src="../imagens/cacau.png" alt="logo da cacau show" height="96" width="120">
+				
+				
+				<div id="menu">	
+					<ul>
+						<li><a href="../index.html">Página Inicial</a></li>
+						<li><a href="../secoes/cursos.html">Comprar</a></li>
+						
+					</ul>		
+				</div>
+				
+			</div>
+			
+			
+			<div id="aside">
+				
+					<form id="form1" method = "post">
+						<fieldset>
+							<legend>Dados do comprador</legend>
+							<p>
+								<label for="nome">Nome:</label>
+								<input id = "nome" type="text" placeholder="Nome">
+							</p>
+							<p>
+								<label for="email">Email:</label>
+								<input id = "email" type="text" placeholder="Email">
+							</p>
+							<p>
+								<label>Endereço:</label>
+								<input type="text" placeholder="Endereço" size = "35" maxlength ="10">
+							</p>
+							
+						</fieldset>
+						<fieldset>
+							<legend>Tipo Produto</legend>
+							<p>
+							<select>
+								<option value="0" selected>Produto:</option>
+								<option value="1">Bolo de cacau</option>
+								<option value="2">Nega maluca</option>
+								<option value="3">Trufa</option>
+								<option value="4">Bolo de cenoura</option>
+								<option value="5">Brigadeiro</option>
+								<option value="6">Pavê de chocolate</option>
+							</select>
+							<p>
+								<label for="QTD">Qtd:</label>
+								<input id = "QTD" type="text" placeholder="0" size = "5" maxlength ="10" >
+							</p>
+							
+						</fieldset>
+						<fieldset>
+							<legend>Resumo</legend>
+							<p>
+								<label>Total:</label>
+								<input name = "valor" type = "text" size = "10" maxlength ="10" value="$"/>
+							</p>
+						</fieldset>
+						<input type = "submit" value = "COMFIRMA" onclick="return validar()"/>
+					</form>
+				</div>
+			
+					
+					
+            <div id="footer">		      
+				<p>Cacau Show - Itapevi - São paulo - Fone: (11) 3298-8080</p>
+			</div>
+		</div>
+	</body>
+</html>
